@@ -13,10 +13,6 @@ import openfl.utils.Assets;
 
 using StringTools;
 
-#if MODS_ALLOWED
-import sys.FileSystem;
-import sys.io.File;
-#end
 
 typedef CharacterFile =
 {
