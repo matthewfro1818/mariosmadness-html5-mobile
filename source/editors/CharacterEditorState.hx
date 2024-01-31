@@ -35,9 +35,6 @@ import openfl.events.IOErrorEvent;
 import openfl.net.FileReference;
 
 using StringTools;
-#if MODS_ALLOWED
-import sys.FileSystem;
-#end
 
 
 /**
