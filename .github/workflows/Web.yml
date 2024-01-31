@@ -1,0 +1,49 @@
+name: Web
+on: workflow_dispatch
+jobs:
+  HTML5:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.2.3
+
+      - name: Install Libraries
+        run: |
+          sudo apt-get install libvlc-dev
+          sudo apt-get install libvlccore-dev
+          haxelib setup ~/haxelib
+          haxelib install hxcpp 3.2.102 > /dev/null
+          haxelib install lime 7.9.0
+          haxelib install openfl 9.1.0
+          haxelib --never install flixel 4.10.0
+          haxelib run lime setup flixel
+          haxelib run lime setup
+          haxelib install flixel-tools
+          haxelib install flixel-ui 2.4.0
+          haxelib git flixel-addons https://github.com/Ant643/flixel-addons  2.11.0 --quiet
+          haxelib install tjson --quiet
+          haxelib install hxjsonast 1.0.1 --quiet
+          haxelib git hxCodec https://github.com/Ant643/hxCodec- hxCodecPsych0.4.2 --quiet
+          haxelib git linc_luajit https://github.com/Ant643/linc_luajit. luajitpsych0.4.2 --quiet
+          haxelib install hscript 2.4.0 --quiet
+          haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
+          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
+          haxelib install hxcpp-debug-server
+          haxelib list
+
+
+      - name: Compile
+        run: haxelib run lime build html5 -final
+
+      - name: Upload Artifact
+        if: ${{ success() }}
+        uses: actions/upload-artifact@main
+        with:
+          name: html5Build
+          path: export/release/html5/bin
+          if-no-files-found: error
