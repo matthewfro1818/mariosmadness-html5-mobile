@@ -1,9 +1,6 @@
 package;
 
 #if MODS_ALLOWED
-import sys.FileSystem;
-import sys.io.File;
-#else
 import openfl.utils.Assets;
 #end
 import Song;
