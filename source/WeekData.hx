@@ -1,9 +1,6 @@
 package;
 
 #if MODS_ALLOWED
-import sys.FileSystem;
-import sys.io.File;
-#end
 import haxe.Json;
 import haxe.format.JsonParser;
 import lime.utils.Assets;
