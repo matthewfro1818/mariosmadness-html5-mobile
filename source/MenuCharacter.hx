@@ -5,10 +5,6 @@ import flixel.graphics.frames.FlxAtlasFrames;
 import haxe.Json;
 import haxe.format.JsonParser;
 import openfl.utils.Assets;
-#if MODS_ALLOWED
-import sys.FileSystem;
-import sys.io.File;
-#end
 
 typedef MenuCharacterFile =
 {
