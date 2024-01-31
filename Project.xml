@@ -62,8 +62,6 @@
 		<library name="songs"         preload="false" />
 		<library name="shared"        preload="false" />
 	</section>
-	
-	<haxelib name="hxcodec" version="2.6.1" />
 
 	<assets path="plugins/"             rename=''               if="VIDEOS_ALLOWED windows" />
 	<assets path="dlls/"                rename=''               if="VIDEOS_ALLOWED windows" />
