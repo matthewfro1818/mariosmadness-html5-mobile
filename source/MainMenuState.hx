@@ -32,8 +32,6 @@ import lime.graphics.Image;
 import openfl.Lib;
 import openfl.filters.ShaderFilter;
 import openfl.ui.Mouse;
-import sys.FileSystem;
-import sys.io.File;
 
 using StringTools;
 
