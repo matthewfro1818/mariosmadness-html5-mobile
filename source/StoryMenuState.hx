@@ -23,7 +23,6 @@ import hxcodec.VideoHandler;
 import hxcodec.VideoSprite;
 import lime.net.curl.CURLCode;
 import openfl.filters.ShaderFilter;
-import sys.FileSystem;
 
 using StringTools;
 #if desktop
