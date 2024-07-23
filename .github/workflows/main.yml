@@ -1,8 +1,8 @@
 name: Web
 on: workflow_dispatch
 jobs:
-  HTML5:
-    runs-on: ubuntu-latest
+  buildWindows:
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@main
@@ -14,8 +14,6 @@ jobs:
 
       - name: Install Libraries
         run: |
-          sudo apt-get install libvlc-dev
-          sudo apt-get install libvlccore-dev
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null
           haxelib install lime 8.0.2
@@ -37,7 +35,7 @@ jobs:
 
 
       - name: Compile
-        run: haxelib run lime build html5 -final
+        run: haxelib run lime build windows -release
 
       - name: Upload Artifact
         if: ${{ success() }}
