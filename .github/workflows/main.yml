@@ -36,7 +36,12 @@ jobs:
           sudo apt-get install libvlccore-dev
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null --quiet
-          haxe -cp ./setup -D analyzer-optimize -main Main --interp
+          haxe -cp ./setup -D analyzer-optimize -main Main --interp  
+          haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
+          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
+          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
+          haxelib git faxe https://github.com/uhrobots/faxe
+          haxelib git polymod https://github.com/larsiusprime/polymod.git
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
       - name: Create Version Tag
@@ -66,6 +71,11 @@ jobs:
           haxelib setup C:/haxelib
           haxelib install hxcpp > /dev/null --quiet
           haxe -cp ./setup -D analyzer-optimize -main Main --interp
+          haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
+          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
+          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
+          haxelib git faxe https://github.com/uhrobots/faxe
+          haxelib git polymod https://github.com/larsiusprime/polymod.git
         shell: cmd
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> %USERPROFILE%/settings.cocoa
@@ -95,6 +105,11 @@ jobs:
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null --quiet
           haxe -cp ./setup -D analyzer-optimize -main Main --interp
+          haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
+          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
+          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
+          haxelib git faxe https://github.com/uhrobots/faxe
+          haxelib git polymod https://github.com/larsiusprime/polymod.git
       - name: Skip SScript setup mode
         run: echo 'oy9:showMacroty8:loopCosti25y10:includeAllfg' >> ~/settings.cocoa
       - name: Create Version Tag
