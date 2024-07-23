@@ -15,7 +15,7 @@ haxelib install flixel-ui 2.5.0 --quiet
 haxelib install flixel-addons 3.1.1 --quiet
 haxelib install tjson --quiet
 haxelib install hxCodec --quiet
-haxelib git luajit https://github.com/nebulazorua/linc_luajit --quiet
+haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit --quiet
 haxelib install hscript 2.4.0 --quiet
 haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex --quiet
 haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc --quiet
